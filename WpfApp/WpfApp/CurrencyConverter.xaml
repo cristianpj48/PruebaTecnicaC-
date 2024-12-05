@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp.CurrencyConverter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Currency Converter" Height="280" Width="420">
+    <Grid Margin="10">
+        <!-- Etiquetas -->
+        <TextBlock Text="Amount :" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtAmount" Width="200" Height="25" Margin="100,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="From :" Margin="10,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <ComboBox x:Name="cmbFrom" Width="200" Height="25" Margin="100,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsEnabled="False">
+            <ComboBoxItem Content="USD" IsSelected="True"/>
+        </ComboBox>
+
+        <TextBlock Text="To :" Margin="10,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <ComboBox x:Name="cmbTo" Width="200" Height="25" Margin="100,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Total :" Margin="10,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtTotal" Width="200" Height="25" Margin="100,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <!-- Botón -->
+        <Button Content="Convert" Width="100" Height="30" Margin="150,180,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="ConvertButton_Click" Background="Blue" Foreground="White"/>
+    </Grid>
+</Window>
+
